@@ -19,8 +19,8 @@ or download the css on github and include in your project.
 
 ## The Code
 ```
-[http://mrmrs.cc](http://mrmrs.cc - Entire internet gateway to all things mrmrs)
-[http://mrmrs.io](http://mrmrs.io - Open source projects)
+[http://mrmrs.cc - Entire internet gateway to all things mrmrs](http://mrmrs.cc)
+[http://mrmrs.io - Open source projects](http://mrmrs.io)
 
 ## License
 
