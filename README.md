@@ -4,9 +4,6 @@
   Set the desired css-grid on any element for any breakpoint.
   Base class names are namespaced across three breakpoints:
 
-*  -ns = not-small (covers everything larger than mobile)
-*  -m  = medium
-*  -l  = large
 
 ## Install
 ```
