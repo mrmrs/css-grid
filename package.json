@@ -1,6 +1,6 @@
 {
   "name": "css-grid",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "homepage": "http://github.com/mrmrs/css-grid",
   "description": "Css module of single purpose classes for grid",
   "keywords": [
@@ -29,6 +29,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "gulp": "^3.8.10",
     "gulp-autoprefixer": "^1.0.0"
   }
 }
