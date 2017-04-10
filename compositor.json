@@ -7,31 +7,84 @@
   "title": "Css Grid",
   "branch": "",
   "style": {
-    "name": "Material",
+    "name": "Default",
     "componentSet": {
-      "nav": "nav/DarkAbsoluteNav",
-      "header": "header/GradientHeader",
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
       "article": "article/BasicArticle",
       "footer": "footer/BasicFooter"
     },
-    "fontFamily": "Roboto, sans-serif",
+    "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+    "fontWeight": 400,
+    "bold": 600,
+    "lineHeight": 1.5,
+    "typeScale": [
+      72,
+      48,
+      24,
+      20,
+      16,
+      14,
+      12
+    ],
+    "monospace": "Menlo, monospace",
     "heading": {
-      "fontWeight": 500,
-      "letterSpacing": "-0.01em"
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontWeight": 600,
+      "lineHeight": 1.25,
+      "textTransform": null,
+      "letterSpacing": null
+    },
+    "h0": {},
+    "h1": {},
+    "h2": {},
+    "h3": {},
+    "h4": {},
+    "h5": {},
+    "h6": {},
+    "alternativeText": {},
+    "space": [
+      0,
+      8,
+      16,
+      32,
+      48,
+      64,
+      96
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "centered": false
     },
     "colors": {
-      "text": "#212121",
+      "text": "#111",
       "background": "#fff",
-      "primary": "#2196f3",
-      "secondary": "#1565c0",
-      "highlight": "#ff4081",
-      "border": "#e0e0e0",
-      "muted": "#f5f5f5"
+      "primary": "#08e",
+      "secondary": "#059",
+      "highlight": "#e08",
+      "border": "#ddd",
+      "muted": "#eee"
     },
-    "layout": {
-      "centered": true,
-      "bannerHeight": "80vh",
-      "maxWidth": 896
+    "border": {
+      "width": 1,
+      "radius": 2
+    },
+    "link": {},
+    "button": {
+      "hover": {
+        "boxShadow": "inset 0 0 0 999px rgba(0, 0, 0, .125)"
+      }
+    },
+    "input": {},
+    "body": {
+      "margin": 0
+    },
+    "breakpoints": {
+      "xs": "@media screen and (max-width:40em)",
+      "sm": "@media screen and (min-width:40em)",
+      "md": "@media screen and (min-width:52em)",
+      "lg": "@media screen and (min-width:64em)"
     }
   },
   "content": [
@@ -68,7 +121,9 @@
           "repo": "css-grid"
         }
       ],
-      "text": "v1.0.7"
+      "text": "v1.0.7",
+      "backgroundImage": "http://mrmrs.io/photos/u/017.jpg",
+      "image": ""
     },
     {
       "component": "article",
@@ -76,19 +131,6 @@
         "source": "github.readme"
       },
       "html": "<h1>css-grid 1.0.6</h1>\n<p>Css module of single purpose classes for grid</p>\n<h4>Stats</h4>\n<table>\n<thead>\n<tr>\n<th>77</th>\n<th>0</th>\n<th>0</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>bytes</td>\n<td>selectors</td>\n<td>declarations</td>\n</tr>\n</tbody>\n</table>\n<h2>Installation</h2>\n<h4>With <a href=\"https://npmjs.com\">npm</a></h4>\n<pre>npm install --<span class=\"hljs-built_in\">save</span>-dev css-<span class=\"hljs-built_in\">grid</span></pre><p>Learn more about using css installed with npm:</p>\n<ul>\n<li><a href=\"https://webpack.github.io/docs/stylesheets.html\">https://webpack.github.io/docs/stylesheets.html</a></li>\n<li><a href=\"https://github.com/defunctzombie/npm-css\">https://github.com/defunctzombie/npm-css</a></li>\n</ul>\n<h4>With Git</h4>\n<p>http:</p>\n<pre>git <span class=\"hljs-keyword\">clone</span> <span class=\"hljs-title\">https</span>://github.com/tachyons-css/css-grid</pre><p>ssh:</p>\n<pre>git <span class=\"hljs-keyword\">clone</span> <span class=\"hljs-title\">git</span>@github.com:tachyons-css/css-grid.git</pre><h2>Usage</h2>\n<h4>Using with <a href=\"https://github.com/postcss/postcss\">Postcss</a></h4>\n<p>Import the css module</p>\n<pre>@<span class=\"hljs-keyword\">import</span> <span class=\"hljs-string\">&quot;css-grid&quot;</span>;</pre><p>Then process the css using the <a href=\"https://github.com/tachyons-css/tachyons-cli\"><code>tachyons-cli</code></a></p>\n<pre>$ npm i -g tachyons-cli\n$ tachyons path/to/css-file.css &gt; dist/t.css</pre><h4>Using the css</h4>\n<h5>CDN</h5>\n<p>The easiest and most simple way to use the css is to use the cdn hosted version. Include it in the head of your html with:</p>\n<pre>&lt;<span class=\"hljs-keyword\">link</span> rel=<span class=\"hljs-string\">&quot;stylesheet&quot;</span> href=<span class=\"hljs-string\">&quot;http://unpkg.com/css-grid@1.0.6/css/css-grid.min.css&quot;</span> /&gt;</pre><h5>Locally</h5>\n<p>The built css is located in the <code>css</code> directory. It contains an unminified and minified version.\nYou can either cut and paste that css or link to it directly in your html.</p>\n<pre><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;stylesheet&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;path/to/module/css/css-grid&quot;</span>&gt;</span></pre><h4>Development</h4>\n<p>The source css files can be found in the <code>src</code> directory.\nRunning <code>$ npm start</code> will process the source css and place the built css in the <code>css</code> directory.</p>\n<h2>The css</h2>\n<pre>@<span class=\"hljs-keyword\">media</span> screen and (min-width: <span class=\"hljs-number\">48em</span>) { }\n@<span class=\"hljs-keyword\">media</span> screen and (min-width:<span class=\"hljs-number\">48em</span>) and (max-width: <span class=\"hljs-number\">64em</span>) { }\n@<span class=\"hljs-keyword\">media</span> screen and (min-width: <span class=\"hljs-number\">64em</span>) { }</pre><h2>Contributing</h2>\n<ol>\n<li>Fork it</li>\n<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>\n<li>Commit your changes (<code>git commit -am &apos;Add some feature&apos;</code>)</li>\n<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>\n<li>Create new Pull Request</li>\n</ol>\n<h2>Authors</h2>\n<ul>\n<li><a href=\"http://mrmrs.io\">mrmrs</a></li>\n<li><a href=\"http://johnotander.com\">johno</a></li>\n</ul>\n<h2>License</h2>\n<p>ISC</p>\n"
-    },
-    {
-      "component": "footer",
-      "links": [
-        {
-          "href": "https://github.com/mrmrs/css-grid",
-          "text": "GitHub"
-        },
-        {
-          "href": "https://github.com/mrmrs",
-          "text": "mrmrs"
-        }
-      ]
     }
   ]
 }
