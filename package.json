@@ -30,7 +30,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "tachyons-cli": "^1.0.8"
+    "tachyons-cli": "^1.3.0"
   },
   "scripts": {
     "start": "tachyons src/css-grid.css > css/css-grid.css && tachyons src/css-grid.css --minify > css/css-grid.min.css && tachyons src/css-grid.css --generate-docs --package=../../package.json > readme.md"
