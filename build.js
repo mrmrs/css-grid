@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { transform } = require('lightningcss');
 
-const srcFile = path.join(__dirname, 'src', 'css-grid.css');
+const srcFile = path.join(__dirname, 'src', 'grid.css');
 const distDir = path.join(__dirname, 'dist');
 
 // Read source
@@ -15,22 +15,22 @@ if (!fs.existsSync(distDir)) {
 
 // Unminified — just normalize formatting
 const { code: unminified } = transform({
-  filename: 'css-grid.css',
+  filename: 'grid.css',
   code: Buffer.from(source),
   minify: false,
 });
 
-fs.writeFileSync(path.join(distDir, 'css-grid.css'), unminified);
+fs.writeFileSync(path.join(distDir, 'grid.css'), unminified);
 
 // Minified
 const { code: minified } = transform({
-  filename: 'css-grid.css',
+  filename: 'grid.css',
   code: Buffer.from(source),
   minify: true,
 });
 
-fs.writeFileSync(path.join(distDir, 'css-grid.min.css'), minified);
+fs.writeFileSync(path.join(distDir, 'grid.min.css'), minified);
 
 console.log('Build complete:');
-console.log(`  dist/css-grid.css     ${unminified.length} bytes`);
-console.log(`  dist/css-grid.min.css ${minified.length} bytes`);
+console.log(`  dist/grid.css     ${unminified.length} bytes`);
+console.log(`  dist/grid.min.css ${minified.length} bytes`);
