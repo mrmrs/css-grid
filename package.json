@@ -1,38 +1,44 @@
 {
   "name": "css-grid",
-  "style": "grid.css",
-  "version": "1.0.8",
-  "homepage": "http://github.com/mrmrs/css-grid",
-  "description": "Css module of single purpose classes for grid",
+  "version": "2.0.0",
+  "description": "Functional CSS for grid",
+  "style": "dist/grid.css",
+  "main": "dist/grid.css",
+  "exports": {
+    ".": "./dist/grid.css",
+    "./dist/*": "./dist/*",
+    "./src/*": "./src/*"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
+  },
   "keywords": [
     "css",
-    "oocss",
-    "grid"
+    "grid",
+    "utility",
+    "single-purpose",
+    "functional-css"
   ],
-  "css-grid": {
+  "homepage": "https://github.com/mrmrs/css-grid",
+  "repository": {
     "type": "git",
-    "url": "http://github.com/mrmrs/css-grid.git"
+    "url": "https://github.com/mrmrs/css-grid.git"
   },
   "bugs": {
-    "url": "https://github.com/mrmrs/css-grid/issues",
-    "email": "hi@mrmrs.cc"
+    "url": "https://github.com/mrmrs/css-grid/issues"
   },
   "author": {
     "name": "Adam Morse",
     "email": "hi@mrmrs.cc",
     "url": "http://mrmrs.cc"
   },
-  "contributors": [
-    {
-      "name": "Adam Morse",
-      "email": "hi@mrmrs.cc"
-    }
-  ],
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "lightningcss": "^1"
-  },
-  "scripts": {
-    "build": "node build.js"
   }
 }
